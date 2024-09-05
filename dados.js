@@ -1,4 +1,5 @@
-const jogos = [
+// Variavel responsavel por armazenar os dados dos jogos
+let jogos = [
     {
       nomeJogo: "Super Mario Bros.",
       categoria: "Plataforma",

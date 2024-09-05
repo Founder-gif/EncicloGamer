@@ -16,7 +16,7 @@
 
 /* =========================== | Interface | ======================= */
 /* -------- | Classe responsavel pela sepação do conteudo | -------- */
-#interface {
+.interface {
     /* cor */
     border-color: var(--cor-separador);
 
@@ -27,6 +27,7 @@
 
 /* ===================== | FILTER NOISE | ============================*/
 .noise::before {
+    /* Codigo para criar efeito de chiado na pagina */
     background-image: url(./image/noise.webp);
     position: fixed;
     top: 0;
@@ -37,7 +38,7 @@
     opacity: 0.01;
     z-index: 1000;
     pointer-events: none;
-    /* Codigo copiado */
+    /* Este bloco de Codigo foi copiado de yt/Taimoor Shahzada */
 }
 
 /* ============================= | BODY | ============================*/
@@ -66,10 +67,10 @@ body {
     position: absolute;
     text-align: center;
     top: 10px;
-    left: 35%;
     /* Calculo para centralizar */
-    width: 30%;
     /* wd/2 + left = 50% do body */
+    left: 35%;
+    width: 30%;
 
     /* Estilização do nome */
     background-color: var(--cor-fundo);
@@ -95,100 +96,144 @@ body {
 
 /* =========================== | MAIN | ======================= */
 main {
-
+    /* Posicionamento do bloco principal */
     position: absolute;
     top: 10%;
-
+    /* Organização dos itens internos */
     display: grid;
     grid-template-areas:
-        "resultados categorias"
-        "buscador categorias";
+        "resultados detalhes"
+        "resultados detalhes"
+        "buscador criador";
     grid-template-columns: 3.5fr 2fr;
     grid-template-rows: 6fr 1fr;
     gap: 10px;
 
+    /* Definição de tamanho para MAIN */
     width: 90%;
     height: 80%;
 }
 
 /* ------------------------- Resultados --------------------- */
 .resultados {
+    /* Posicionamento dos resultados */
     grid-area: resultados;
-
+    /* Forçar scroll dentro da div resultados */
     overflow-y: auto;
 }
 
-.jogos{
+.jogos {
+    /* Posicionamento dos itens no menu de resultados */
     margin: 10px;
-    
+
     /* cor */
-    color:var(--cor-secundaria);
+    color: var(--cor-secundaria);
     border-color: transparent;
     border-bottom: var(--cor-separador);
 
-    
+
     /* Estilo da borda */
     border-width: 2px;
     border-style: solid;
+
+    transition: all 0.3s;
+}
+.jogos:hover{
+    /* Estilização da animação dos botões */
+    background-color: var(--cor-separador);
+    color: var(--cor-principal);
+    animation: ease-in-out;
+    transition: .1s;
+    cursor: pointer;
+}
+/* Div responsavel por informar o usuario da necessidade de uma busca */
+.semConteudo {
+
+    /* Disposição do texto */
+    display: flex;
+    justify-content: center;
+    /* Estilização */
+    color: var(--cor-separador);
+    font-size: 200%;
+    /* Centralização do conteudo na div resultados */
+    position: relative;
+    width: 20%;
+    height: 10%;
+    top: 45%;
+    left: 40%;
+    /* ↑ calc: (width ou height)/2 + posições */
+
 }
 
 /* ------------------------ Barra de pesquisa ---------------- */
 .buscador {
+    /* Posicionamento da barra e botão de pesquisa */
     grid-area: buscador;
 
+    /* Disposição dos itens internos */
     display: flex;
     justify-content: space-between;
 }
 
 .buscador input {
+    /* Estilização do input */
     outline: none;
     border-style: solid;
     border-color: var(--cor-separador);
     background-color: transparent;
     color: var(--cor-secundaria);
-
+    width: 55%;
+    /* Estilização da letra */
     font-family: var(--fonte-principal);
     font-size: 200%;
-
+    /* Centralização do texto */
     text-align: center;
-    width: 70%;
 }
 
+/* ------------------------ Botão de pesquisa ---------------- */
 .buscador button {
+    /* Estilização do botão */
     border-style: solid;
     border-color: var(--cor-separador);
-    background-color: transparent;
     color: var(--cor-separador);
-
+    background-color: transparent;
+    width: 20%;
+    /* Transição de animação */
+    transition: .5s;
+    /* Estilização do texto */
     font-family: var(--fonte-principal);
     font-size: 200%;
 
-    width: 28%;
 }
 
-/* ------------------------- Categorias ----------------------- */
-.categorias {
-    grid-area: categorias;
-
-
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-template-rows: 3fr 3fr 3fr 3fr 3fr;
-    gap: 20px;
-    padding: 20px;
-
+.buscador button:hover {
+    /* Estilização da animação dos botões */
+    background-color: var(--cor-separador);
+    color: var(--cor-principal);
+    animation: ease-in-out;
+    transition: .1s;
+    cursor: pointer;
 }
 
-.categorias li {
-    list-style: none;
+/* ------------------------- Detalhes ----------------------- */
+.detalhes {
+    /* Posicionamento da div */
+    grid-area: detalhes;
+    
+}
+/* ------------------------- Creditos ----------------------- */
+.criador{
+    grid-area: criador;
+
+    height: 100%;
+    width: 100%;
+
+    text-align:end;
+    font-size: 20px;
     color: var(--cor-separador);
-
-    border: var(--cor-separador);
-    border-width: 2px;
-    border-style: solid;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    
+}
+.criador a{
+    color: var(--cor-secundaria);
+    text-decoration: none;
 }
