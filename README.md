@@ -9,7 +9,7 @@ Este projeto, desenvolvido durante a **Imersão Dev da Alura com Gemini**, tem c
 ## Funcionalidades:
 **Interface de terminal:** Simula um terminal verde com comandos básicos para navegação e interação.
 ## Em andamento:
-**Link de wiki:** Estou trabalhando em um botão para enviar o usuario para a fanwiki especifica do jogo. Parece simples, mas é um processo demorado
+**Link de wiki:** Estou trabalhando em um botão para enviar o usuario para a fanwiki especifica do jogo. Parece simples, mas é um processo demorado.
 **Tags:** Por motivos de cansaço mental, acabei esquecendo de aplicar as tags nos objetos do arquivo dados.js, mas graças a ultima aula da imersão meus belissimos instrutores me lembraram dessa possibilidade.
 
 ## Estrutura do Projeto:
