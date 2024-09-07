@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+20+Charted&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20+Charted&family=Pixelify+Sans:wght@400..700&display=swap&family=Jersey+10&display=swap');
 
 :root {
 
@@ -9,7 +9,7 @@
     /* Cores padrões */
     --cor-principal: #DAD7CD;
     --cor-secundaria: #A3B18A;
-    --cor-separador: #588157;
+    --cor-separador: #5d8d5c;
     --cor-fundo: #344E41;
 
 }
@@ -21,8 +21,33 @@
     border-color: var(--cor-separador);
 
     /* Estilo da borda */
-    border-width: 2px;
     border-style: solid;
+}
+
+a {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+
+}
+/* Estilizando a scrollbar interna de um div com ID .resultados" */
+::-webkit-scrollbar {
+    width: 15px;
+    /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    margin: 5px;
+    background: var(--cor-separador);
+    border-style: solid;
+    border-color: var(--cor-fundo);
+    border-width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-separador);
+    border-style: solid;
+    border-color: var(--cor-fundo);
+    border-width: 3px;
 }
 
 /* ===================== | FILTER NOISE | ============================*/
@@ -48,11 +73,14 @@ body {
     font-family: var(--fonte-principal);
     width: 95vw;
     height: 90vh;
+    cursor: default;
+
     /* Organização dos elementos */
     display: grid;
     margin: 40px;
     justify-items: center;
 }
+
 
 
 /* =========================== | Header | ======================= */
@@ -95,6 +123,7 @@ body {
 
 
 /* =========================== | MAIN | ======================= */
+
 main {
     /* Posicionamento do bloco principal */
     position: absolute;
@@ -122,6 +151,8 @@ main {
     overflow-y: auto;
 }
 
+
+
 .jogos {
     /* Posicionamento dos itens no menu de resultados */
     margin: 10px;
@@ -137,8 +168,11 @@ main {
     border-style: solid;
 
     transition: all 0.3s;
+
+    cursor: none;
 }
-.jogos:hover{
+
+.jogos:hover {
     /* Estilização da animação dos botões */
     background-color: var(--cor-separador);
     color: var(--cor-principal);
@@ -146,6 +180,7 @@ main {
     transition: .1s;
     cursor: pointer;
 }
+
 /* Div responsavel por informar o usuario da necessidade de uma busca */
 .semConteudo {
 
@@ -182,7 +217,7 @@ main {
     border-color: var(--cor-separador);
     background-color: transparent;
     color: var(--cor-secundaria);
-    width: 55%;
+    width: 70%;
     /* Estilização da letra */
     font-family: var(--fonte-principal);
     font-size: 200%;
@@ -197,7 +232,8 @@ main {
     border-color: var(--cor-separador);
     color: var(--cor-separador);
     background-color: transparent;
-    width: 20%;
+    width: 30%;
+    margin-left: 10px;
     /* Transição de animação */
     transition: .5s;
     /* Estilização do texto */
@@ -221,19 +257,90 @@ main {
     grid-area: detalhes;
     
 }
+
+.detalhesJogo{
+    height: 90%;
+    /* Organização dos intens irtenos */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+    /* Estilização de itens */
+    color: var(--cor-secundaria);
+}
+
+.headerJogo {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    
+    /* cor */
+    color: var(--cor-secundaria);
+    border-color: transparent;
+    border-bottom: var(--cor-separador);
+
+
+    /* Estilo da borda */
+    border-width: 2px;
+    border-style: solid;
+    
+}
+
+.headerJogo .capa {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.capa img {
+    filter: sepia(1) hue-rotate(45deg);
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.headerJogo .textoHeader{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.textoHeader h2{
+    margin: 0;
+    font-size: 30px;
+}
+
+.textoHeader p{
+    
+    margin: 0;
+}
+
+.detalhes .descricaoJogo {
+    
+    height: 100%;
+    margin-top: 10px;
+    padding: 10px;
+
+    overflow-y: auto;
+    /* cor */
+    color: var(--cor-secundaria);
+    border-color: var(--cor-separador);
+
+
+    /* Estilo da borda */
+    border-width: 2px;
+    border-style: solid;
+    
+}
+
 /* ------------------------- Creditos ----------------------- */
-.criador{
+.criador {
     grid-area: criador;
 
     height: 100%;
     width: 100%;
 
-    text-align:end;
+    text-align: end;
     font-size: 20px;
     color: var(--cor-separador);
-    
-}
-.criador a{
-    color: var(--cor-secundaria);
-    text-decoration: none;
 }
