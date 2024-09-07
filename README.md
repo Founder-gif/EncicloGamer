@@ -7,8 +7,8 @@ Este projeto, desenvolvido durante a **Imersão Dev da Alura com Gemini**, tem c
 **JavaScript:** Interatividade, manipulação do DOM, e busca de informações.   
 
 ## Funcionalidades:
-**Interface de terminal:** Simula um terminal verde com comandos básicos para navegação e interação. 
-**Pesquisa:** Possibilidades de pesquisar os jogos usando termos como nome, ano de lançamento, categoria, desenvolvedora...   
+**Interface de terminal:** Simula um terminal verde com comandos básicos para navegação e interação.   
+**Pesquisa:** Possibilidades de pesquisar os jogos usando termos como nome, ano de lançamento, categoria, desenvolvedora...    
 **Detalhes:** Area voltada para descrever melhor cada jogo selecionado.   
 ## Em andamento:
 **Link de wiki:** Estou trabalhando em um botão para enviar o usuario para a fanwiki especifica do jogo. Parece simples, mas é um processo demorado.   
