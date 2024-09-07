@@ -24,6 +24,19 @@
     border-style: solid;
 }
 
+.borda::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: inset 0 0 50px #000;
+}
+
+
 a {
     color: var(--cor-secundaria);
     text-decoration: underline;
@@ -60,13 +73,15 @@ a {
     width: 100vw;
     height: 100vh;
     content: "";
-    opacity: 0.01;
-    z-index: 1000;
+    filter: saturate(1000%) hue-rotate(200deg);
+    opacity: .01;
+    z-index: 900;
     pointer-events: none;
     /* Este bloco de Codigo foi copiado de yt/Taimoor Shahzada */
 }
 
 /* ============================= | BODY | ============================*/
+
 body {
     /* Estilização do body */
     background-color: var(--cor-fundo);
@@ -79,6 +94,7 @@ body {
     display: grid;
     margin: 40px;
     justify-items: center;
+
 }
 
 
