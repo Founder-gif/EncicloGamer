@@ -18,6 +18,7 @@ detalhesJogo.innerHTML = ` <div class="semConteudo">Selecione um item...</div>`
 // -------------------------------------------------------
 
 // ====================== FUNÇÕES ========================
+
 listaJogos.sort((a,b) => {
     return a.nome.localeCompare(b.nome)
 })
@@ -63,9 +64,16 @@ function verificarBusca(texto) {
 
 function descricaoJogo(indece) {
 
+    if(window.innerWidth < 800){
+        detalhesJogo.style.display = 'block'
+        detalhesJogo.style.position = 'fixed'
+    }
+
+
     detalhesJogo.innerHTML = `
         <div class="detalhesJogo">
             <div class="headerJogo">
+                <button onclick="fecharDetalhes()" class="interface">x</button>
                 <div class="capa">   
                     <img src="${jogos[indece].capa}">
                 </div>
@@ -82,5 +90,8 @@ function descricaoJogo(indece) {
         </div>
     `
 
-    
+}
+
+function fecharDetalhes(){
+    detalhesJogo.style.display = 'none'   
 }
