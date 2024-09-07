@@ -1,0 +1,277 @@
+/* Arquivo dedicado a responsividade */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20+Charted&family=Pixelify+Sans:wght@400..700&display=swap&family=Jersey+10&display=swap');
+
+:root {
+
+    /* Fontes padrões */
+    --fonte-principal: "Pixelify Sans";
+    --fonte-secundaria: "Jersey 20 Charted";
+
+    /* Cores padrões */
+    --cor-principal: #DAD7CD;
+    --cor-secundaria: #A3B18A;
+    --cor-separador: #5d8d5c;
+    --cor-fundo: #344E41;
+
+}
+
+@media (max-width: 800px) {
+
+    body{
+        margin: 5px;
+
+
+    }
+
+    .nome-site{
+    
+        font-size: 10px;
+
+        left: 8%;
+        width: 80%;
+        top: 2px;
+    }
+    
+    main{
+
+        display: grid;
+        grid-template-areas:
+        "resultados"
+        "resultados"
+        "buscador";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr 2fr;
+        gap: 10px;
+
+        /* Definição de tamanho para MAIN */
+        width: 90%;
+        height: 80%;
+
+    }
+
+    .resultados{
+        font-size: 15px;
+    }
+
+    .buscador{
+        
+        font-size: 10px;
+
+    }
+
+    .detalhes{
+        display: none;
+
+        width: 90%;
+        height: 80%;
+
+    }
+
+    .detalhes button{
+
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 90%;
+
+        width: 30px;
+        height: 30px;
+
+
+
+        color: var(--cor-separador);
+        background-color: var(--cor-fundo);
+    }
+    
+    .detalhes button:hover {
+        /* Estilização da animação dos botões */
+        background-color: var(--cor-separador);
+        color: var(--cor-principal);
+        animation: ease-in-out;
+        transition: .1s;
+        cursor: pointer;
+    }
+
+
+    .detalhesJogo{
+        height: 90%;
+        /* Organização dos intens irtenos */
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        
+        /* Estilização de itens */
+        color: var(--cor-secundaria);
+    }
+    .headerJogo {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 10px;
+        
+        /* cor */
+        color: var(--cor-secundaria);
+        border-color: transparent;
+        border-bottom: var(--cor-separador);
+    
+    
+        /* Estilo da borda */
+        border-width: 2px;
+        border-style: solid;
+        
+    }
+    
+    .headerJogo .capa {
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .capa img {
+        filter: sepia(1) hue-rotate(45deg);
+        width: 100px;
+        height: 100px;
+        object-fit: fill;
+    }
+    
+    .headerJogo .textoHeader{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .criador{
+        display: none;
+    }
+};
+
+@media (max-height: 600px) {
+
+    body{
+        margin: 5px;
+    }
+
+    .nome-site{
+    
+        font-size: 10px;
+
+        left: 8%;
+        width: 80%;
+        top: 2px;
+    }
+    
+    main{
+
+        display: grid;
+        grid-template-areas:
+        "resultados"
+        "resultados"
+        "buscador";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr 2fr;
+        gap: 10px;
+
+        /* Definição de tamanho para MAIN */
+        width: 90%;
+        height: 80%;
+
+    }
+
+    .resultados{
+        font-size: 15px;
+    }
+
+    .buscador{
+        
+        font-size: 10px;
+
+    }
+
+    .detalhes{
+        display: none;
+
+        width: 90%;
+        height: 80%;
+
+    }
+
+    .detalhes button{
+
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 90%;
+
+        width: 30px;
+        height: 30px;
+
+
+
+        color: var(--cor-separador);
+        background-color: var(--cor-fundo);
+    }
+    
+    .detalhes button:hover {
+        /* Estilização da animação dos botões */
+        background-color: var(--cor-separador);
+        color: var(--cor-principal);
+        animation: ease-in-out;
+        transition: .1s;
+        cursor: pointer;
+    }
+
+
+    .detalhesJogo{
+        height: 90%;
+        /* Organização dos intens irtenos */
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        
+        /* Estilização de itens */
+        color: var(--cor-secundaria);
+    }
+    .headerJogo {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 10px;
+        
+        /* cor */
+        color: var(--cor-secundaria);
+        border-color: transparent;
+        border-bottom: var(--cor-separador);
+    
+    
+        /* Estilo da borda */
+        border-width: 2px;
+        border-style: solid;
+        
+    }
+    
+    .headerJogo .capa {
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .capa img {
+        filter: sepia(1) hue-rotate(45deg);
+        width: 100px;
+        height: 100px;
+        object-fit: fill;
+    }
+    
+    .headerJogo .textoHeader{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .criador{
+        display: none;
+    }
+
+}
