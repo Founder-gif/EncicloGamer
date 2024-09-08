@@ -74,6 +74,10 @@ function verificarBusca(texto) {
     }
 }
 function todos() {
+    //---------- Limpar areas de resultados-----------
+    divResultados.innerHTML = ``
+    resultados = ``
+    
     i = 0
     for (let item of jogos) {
         // Normaliza todos os valores para lowerCase
